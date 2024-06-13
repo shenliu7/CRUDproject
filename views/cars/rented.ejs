@@ -1,0 +1,18 @@
+<%- include('../layout') %>
+
+<h1>My Rented Cars</h1>
+<% if (cars.length === 0) { %>
+  <p>You have not rented any cars.</p>
+<% } else { %>
+  <ul>
+    <% cars.forEach(car => { %>
+      <li>
+        <h2><%= car.make %> <%= car.model %> (<%= car.year %>)</h2>
+        <p>Price per day: $<%= car.pricePerDay %></p>
+        <form action="/cars/return/<%= car._id %>" method="POST">
+          <button type="submit">Return</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>

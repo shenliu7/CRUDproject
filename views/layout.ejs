@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P2P Car Rental</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="/">
+          <img src="/images/logo.png" alt="P2P Car Rental Logo">
+          <span class="app-name">CarApp</span>
+        </a>
+      </div>
+      <ul>
+        <% if (user) { %>
+          <li><a href="/cars">My Cars</a></li>
+          <li><a href="/cars/new">Add Car</a></li>
+          <li><a href="/cars/available">Available Cars</a></li>
+          <li><a href="/cars/rented">My Rented Cars</a></li>
+          <li><a href="/users/logout">Logout</a></li>
+        <% } else { %>
+          <li><a href="/users/login">Login</a></li>
+          <li><a href="/users/register">Register</a></li>
+        <% } %>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <% if (typeof success_msg != 'undefined' && success_msg.length > 0) { %>
+      <div class="alert alert-success"><%= success_msg %></div>
+    <% } %>
+    <% if (typeof error_msg != 'undefined' && error_msg.length > 0) { %>
+      <div class="alert alert-danger"><%= error_msg %></div>
+    <% } %>
+    <% if (typeof error != 'undefined' && error.length > 0) { %>
+      <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+  </div>
+</body>
+</html>
+
+
+
+
+
+

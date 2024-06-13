@@ -1,0 +1,24 @@
+<%- include('../layout') %>
+
+<h1>Edit Car</h1>
+<form action="/cars/<%= car._id %>?_method=PUT" method="POST">
+  <div>
+    <label for="make">Make</label>
+    <input type="text" name="make" value="<%= car.make %>" required>
+  </div>
+  <div>
+    <label for="model">Model</label>
+    <input type="text" name="model" value="<%= car.model %>" required>
+  </div>
+  <div>
+    <label for="year">Year</label>
+    <input type="number" name="year" value="<%= car.year %>" required>
+  </div>
+  <div>
+    <label for="pricePerDay">Price per day</label>
+    <input type="number" name="pricePerDay" value="<%= car.pricePerDay %>" required>
+  </div>
+  <button type="submit">Update Car</button>
+</form>
+
+

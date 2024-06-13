@@ -1,0 +1,14 @@
+<%- include('../layout') %>
+
+<h1>My Cars</h1>
+<% cars.forEach(car => { %>
+  <div>
+    <h2><%= car.make %> <%= car.model %> (<%= car.year %>)</h2>
+    <p>Price per day: $<%= car.pricePerDay %></p>
+    <a href="/cars/edit/<%= car._id %>">Edit</a>
+    <form action="/cars/<%= car._id %>?_method=DELETE" method="POST" style="display:inline;">
+      <button type="submit">Delete</button>
+    </form>
+  </div>
+<% }) %>
+

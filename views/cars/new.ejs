@@ -1,0 +1,22 @@
+<%- include('../layout') %>
+
+<h1>Add New Car</h1>
+<form action="/cars" method="POST">
+  <div>
+    <label for="make">Make</label>
+    <input type="text" name="make" required>
+  </div>
+  <div>
+    <label for="model">Model</label>
+    <input type="text" name="model" required>
+  </div>
+  <div>
+    <label for="year">Year</label>
+    <input type="number" name="year" required>
+  </div>
+  <div>
+    <label for="pricePerDay">Price per day</label>
+    <input type="number" name="pricePerDay" required>
+  </div>
+  <button type="submit">Add Car</button>
+</form>

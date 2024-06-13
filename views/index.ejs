@@ -1,0 +1,9 @@
+<% include('layout') %>
+
+<h1>Welcome to P2P Car Rental</h1>
+
+<% if (!user) { %>
+  <p>Please <a href="/users/login">login</a> or <a href="/users/register">register</a> to manage your cars.</p>
+<% } else { %>
+  <p>Welcome back, <%= user.name %>!</p>
+<% } %>
