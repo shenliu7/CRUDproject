@@ -1,7 +1,7 @@
 # CarApp: A P2P car rental app
 ## Made by Shen Liu
 
-![alt text](https://i.ibb.co/88k1hSB/2024-06-14-103419.png)
+![alt text](https://i.ibb.co/hHMLHD7/2024-06-14-110044.png)
 
 ## A local project with CRUD function and a register/login system.
 
