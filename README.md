@@ -43,4 +43,3 @@ Planning materials:
 - Add a wallet system?
 
 # ENJOY YOUR RIDE!
-
